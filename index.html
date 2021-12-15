@@ -1,1 +1,222 @@
-Hello world~!!!!
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <style>
+         <!-- FOR TREE -->
+         ul, #myUL {
+         list-style-type: none;
+         }
+         #myUL {
+         margin: 0;
+         padding: 0;
+         }
+         .caret {
+         cursor: pointer;
+         -webkit-user-select: none; /* Safari 3.1+ */
+         -moz-user-select: none; /* Firefox 2+ */
+         -ms-user-select: none; /* IE 10+ */
+         user-select: none;
+         }
+         .caret::before {
+         content: "\25B6";
+         color: white;
+         display: inline-block;
+         margin-right: 6px;
+         }
+         .caret-down::before {
+         -ms-transform: rotate(90deg); /* IE 9 */
+         -webkit-transform: rotate(90deg); /* Safari */'
+         transform: rotate(90deg);  
+         }
+         .nested {
+         display: none;
+         }
+         .active {
+         display: block;
+         }
+         <!-- FOR BACKGROUND AND BUTTON -->
+         * {
+         box-sizing: border-box;
+         }
+         body {
+         margin: 0;
+         font-family: Arial;
+         font-size: 20px;
+         }
+         #myVideo {
+         filter: saturate(8%)  brightness(10%);
+         position: fixed;
+         right: 0;
+         bottom: 0;
+         min-width: 100%; //100%
+         min-height: 100%;//100%
+         }
+         .content {
+         position: fixed;
+         bottom: 0;
+         background: rgba(0, 0, 0, 0.5);
+         color: White;
+         width: 100%;
+         padding: 20px;
+         }
+         .main {
+         position: fixed;
+         bottom: 250;
+         background: rgba(0, 0, 0, 0);
+         color: #f1f1f1;
+         //width: 100%;
+         padding: 20px;
+         }
+         #myBtn {
+         width: 12.5%;
+         font-size: 20px;
+         padding: 2%;
+         border: none;
+         background: #000;
+         color: #fff;
+         cursor: pointer;
+         }
+         #myBtn:hover {
+         background: #ddd;
+         color: black;
+         }
+      </style>
+            <style id="video_effect">
+               #myVideo {
+         filter: saturate(100%)  brightness(100%);
+         position: fixed;
+         right: 0;
+         bottom: 0;
+         min-width: 100%; //100%
+         min-height: 100%;//100%
+         }
+      </style>
+   </head>
+   <body style="background-color:black;">
+      <video autoplay muted loop id="myVideo">
+         <source src="bgv2.mp4" type="video/mp4">
+         Your browser does not support HTML5 video.
+      </video>
+      <div class="main" id="page">
+      <h1>Chi Li-Cheng</h1>
+         <p>Chi Li-Cheng is a designer and a researcher</p>
+         <p>His research ranges from architectural design, robotic fabrication to artifical intelligence for design.</p>
+         <br></br>
+         <!-- Repertoire Tree -->
+
+      </div>
+      <div class="content">
+      <button id="myBtn" onclick="page_Home()">Home</button>
+      <button id="myBtn" onclick="page_Portfolio()">Portfolio</button>
+      <button id="myBtn" onclick="page_CVs()">CVs</button>
+      <button id="myBtn" onclick="page_Research()">Research</button>
+      <button id="myBtn" onclick="page_Gallery()">Gallery</button>
+      <button id="myBtn" onclick="page_OpenSource()">OpenSource</button>
+      <button id="myBtn" onclick="page_Contact()">Contact</button>
+      </div>
+      <script>
+         var video = document.getElementById("myVideo");
+         var btn = document.getElementById("myBtn");
+         
+         function myFunction() {
+           if (video.paused) {
+             video.play();
+             //btn.innerHTML = "Pause";
+           } else {
+             video.pause();
+             //btn.innerHTML = "Play";
+           }
+         }
+      </script>
+      <script>
+         var toggler = document.getElementsByClassName("caret");
+         var i;
+         
+         for (i = 0; i < toggler.length; i++) {
+           toggler[i].addEventListener("click", function() {
+             this.parentElement.querySelector(".nested").classList.toggle("active");
+             this.classList.toggle("caret-down");
+           });
+         }
+      </script>
+      <!--for pages-->
+      <script>
+         function video_dark(){
+       document.getElementById("video_effect").innerHTML = 
+"#myVideo {filter: saturate(10%)  brightness(20%);position: fixed;right: 0;bottom: 0;min-width: 100%; //100%min-height: 100%;//100%}"
+       ;
+         }
+         function video_light(){
+       document.getElementById("video_effect").innerHTML = 
+"#myVideo {filter: saturate(90%)  brightness(100%);position: fixed;right: 0;bottom: 0;min-width: 100%; //100%min-height: 100%;//100%}"
+       ;
+         }
+         function page_Home() {
+               video_light()
+         fetch('https://chili-cheng.github.io/pages/home.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+         //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+         page_Home()
+         function page_CVs() {
+               video_dark()
+         fetch('https://chili-cheng.github.io/pages/CVs.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+         function page_Portfolio() {
+               video_dark()
+         fetch('https://chili-cheng.github.io/pages/Portfolio.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+                  function page_Research() {
+                        video_dark()
+         fetch('https://chili-cheng.github.io/pages/Research.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+                  function page_Gallery() {
+                        video_dark()
+         fetch('https://chili-cheng.github.io/pages/Gallery.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+                           function page_OpenSource() {
+                                 video_dark()
+         fetch('https://chili-cheng.github.io/pages/OpenSource.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+                                    function page_Contact() {
+                                          video_dark()
+         fetch('https://chili-cheng.github.io/pages/Contact.html')
+         .then(response => response.text())
+         .then(data => {
+         // Do something with your data
+        //console.log(data);
+         document.getElementById("page").innerHTML = data;
+         });}
+      </script>
+   </body>
+</html>
