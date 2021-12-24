@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, height=auto, initial-scale=1">
+  <style>
+    body {
+      text-align: center margin: 0;
+      font-family: Arial;
+      font-size: 17px;
+    }
+
+    .content {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      //justify-content: center;
+      //overflow: auto;
+      //min-height: 100vh;
+      //position: fixed;
+      top: 0;
+      //bottom: 0;
+      //background: rgba(0, 0, 0, 0.5);
+      //color: #f1f1f1;
+      //width: 100%;
+      //padding: 25px;
+      height: 1500px;
+      //height: 100%;
+      //position: relative
+
+    }
+
+    .subcontent {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      justify-content: center;
+      align-items: center;
+      text-align: center top: 50%;
+      left: 50%;
+      //justify-content: center;
+      width: 930px;
+      //padding: 25px;
+      height: 2500px;
+      //height: 100%;
+      //position: relative
+    }
+
+    img.animated-gif {
+      width: 750px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <h1><span class="caret"><strong>OSMKIT</strong></span></h1>
+
+    <p>
+      <img src="https://raw.githubusercontent.com/chengchili/chengchili.github.io/main/image/osmkit/OSMKIT_DIAGRAM.png" alt="" width="750" height="480" />
+    </p>
+    <p>
+      <img src="https://raw.githubusercontent.com/chengchili/chengchili.github.io/main/image/osmkit/OSMKIT_VISION.png" alt="" width="960" height="320" />
+    </p>
+    <div class="subcontent">
+      <p>
+      <h3><span style="color: #333333;"><strong><a style="color: #333333;" href="https://drive.google.com/file/d/10cfr1471IJpsCHrR8l1w_LNH1bSpm4ie/view " target="_blank">Download</a></strong></span></h3>
+      </p>
+      <p>OSMKIT is a grasshopper plugin developed by Chi-Li Cheng. It can facilitate integrating several geospatial data into parametric design process.</p>
+      <p>It offers not only the function to get access to must user-friendly open geodata platform such as openstreetmap, gpx data, but also the fuction to facilitate converting rhino Brep model to geodata like building model of openstreetmap format.
+        Designers and artists can be contributer since the process of sharing data and gaining data is simplified.
+      </p>
+      <p>Consequently, the relations among data user(designers or artists) and open data platfom will be consolidated; the ecosystem of open geodata will be more conducive for designers</p>
+      <h3><strong>How to install?</strong></h3>
+      <p>Well, it's quite simple; you just need to drag it into the canvas of grasshopper</p>
+      <img class="animated-gif" src="https://raw.githubusercontent.com/chengchili/chengchili.github.io/main/image/osmkit/How%20to%20Install_v2.gif">
+
+
+
+      <h3><strong>Example</strong></h3>
+      <!--example1-->
+      </br>
+      <h4><strong>1. Geographic coordinate(lat,lon) to Map(polyline)</strong></h4>
+      <p><span style="color: #333333;"><strong><a style="color: #333333;" href="https://drive.google.com/file/d/1aqtrn-puuNOGP_aQhO0EAU0rh14ZZRQc/view?usp=sharing " target="_blank">Download Example</a></strong></span></p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/osmkit/How-to-use_01.gif?raw=true">
+      </br>
+      <p>Once the coordinate is set, OSMKIT will view the origin in rhino as the location of the set coordinate</p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/osmkit/OSMKIT_OriginalPoint.png?raw=true">
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+
+
+
+      <!--example2-->
+      </br>
+      <h4><strong>2. Collage of Maps</strong></h4>
+      <p><span style="color: #333333;"><strong><a style="color: #333333;" href="https://drive.google.com/file/d/1TXUDA1u-p18Z4xs5mvkc86YOyiSHTfOU/view?usp=sharing " target="_blank">Download Example</a></strong></span></p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/osmkit/Collage_of_Maps.gif?raw=true">
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+
+      <!--example3-->
+      </br>
+      <h4><strong>3. Generating Building Volume</strong></h4>
+      <p><span style="color: #333333;"><strong><a style="color: #333333;" href="https://drive.google.com/file/d/1XLSm9ackwH4T5CF9DnO0awp8Qzb9c8Vz/view?usp=sharing" target="_blank">Download Example</a></strong></span></p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/osmkit/BuildingVolume.gif?raw=true">
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+
+      <!--example4-->
+      </br>
+      <h4><strong>4. Using Value to Derive Models</strong></h4>
+      <p><span style="color: #333333;"><strong><a style="color: #333333;" href="https://drive.google.com/file/d/1lhDR52BuVtbPq9Wi9s7DSbQa_9eQGOtE/view?usp=sharing" target="_blank">Download Example</a></strong></span></p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/osmkit/Value_to_Models.gif?raw=true">
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+
+      <!--example5-->
+      </br>
+      <h4><strong>5. Conversion between Geographic Coordinate and Rhino Coordinate </strong></h4>
+      <p><span style="color: #333333;"><strong><a style="color: #333333;" href="https://drive.google.com/file/d/14puxpqBqv3vYFBH6qBC6cAh82sQwmlSL/view?usp=sharing" target="_blank">Download Example</a></strong></span></p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/osmkit/Conversion.gif?raw=true">
+      <p>The function can be utilized for Drone Mission Planning</p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/portfolio/Portfolio_ChiliCheng-25.jpg?raw=true">
+
+
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+      <!--example6-->
+      </br>
+      <h4><strong>6. OpenTopography SRTM </strong></h4>
+      <p><span style="color: #333333;"><strong><a style="color: #333333;" href="https://drive.google.com/file/d/1ZXoaNWogpiYVusxFGeOEf2f5jzcI1kf_/view?usp=sharing" target="_blank">Download Example</a></strong></span></p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/osmkit/OpenTopography.gif?raw=true">
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+      <!--example7-->
+      </br>
+      <h4><strong>7. Rhino Brep to JOSM (for sharing models) </strong></h4>
+      <p><span style="color: #333333;"><strong><a style="color: #333333;" href="https://drive.google.com/file/d/13ZRnKB9urQieFNYJ1j9jjfEzDznPGOdZ/view?usp=sharing" target="_blank">Download Example</a></strong></span></p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/osmkit/JOSM.gif?raw=true">
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+      <!--example8-->
+      </br>
+      <h4><strong>8. Gpx to Rhino Points</strong></h4>
+      <p><span style="color: #333333;"><strong><a style="color: #333333;" href="https://drive.google.com/file/d/1CQTuV8F0z2wC6p7EhTc8lvHcHUFC-tXc/view?usp=sharing" target="_blank">Download Example</a></strong></span></p>
+      <img class="animated-gif" src="https://github.com/chengchili/chengchili.github.io/blob/main/image/osmkit/GPX.gif?raw=true">
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+    </div>
+    <p>&nbsp;</p>
+
+
+
+
+
+  </div>
+
+</body>
+
+</html>
