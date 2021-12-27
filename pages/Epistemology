@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, height=auto, initial-scale=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <style>
+    ul,
+    #myUL {
+      list-style-type: none;
+    }
+
+    #myUL {
+      margin: 0;
+      padding: 0;
+      height: auto;
+    }
+
+    .caret {
+      cursor: pointer;
+      -webkit-user-select: none;
+      /* Safari 3.1+ */
+      -moz-user-select: none;
+      /* Firefox 2+ */
+      -ms-user-select: none;
+      /* IE 10+ */
+      user-select: none;
+    }
+
+    .caret::before {
+      content: "\25B6";
+      color: black;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .caret-down::before {
+      -ms-transform: rotate(90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(90deg);
+      /* Safari */
+      '
+transform: rotate(90deg);
+    }
+
+    .nested {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+      font-size: 17px;
+    }
+
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    .content {
+      overflow: auto;
+      //min-height: 100vh;
+      //position: fixed;
+      top: 0;
+      //bottom: 0;
+      //background: rgba(0, 0, 0, 0.5);
+      //color: #f1f1f1;
+      width: 100%;
+      padding: 25px;
+      height: 1500px;
+      //height: 100%;
+      position: relative
+    }
+
+    #myBtn {
+      width: 100px;
+      font-size: 18px;
+      padding: 5px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #myBtn:hover {
+      background: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="https://chengchili.github.io/video/hq.mp4" type="video/mp4">
+  </video>
+
+
+  <div class="content">
+    <h2>Epistemology</h2>
+    <p> List of my knowledge</p>
+
+
+    </br>
+    <!--Tree Start-->
+    <ul id="myUL">
+
+
+      <!--Design-->
+      <li><span class="caret"><strong>Design</strong></span>
+        <ul class="nested">
+          <li>A design is a plan or specification for the construction of an object or system or for the implementation of an activity or process</li><br>
+
+
+          <!--Cybernetics-->
+          <li><span class="caret"><strong>Cybernetics</strong></span>
+            <ul class="nested">
+
+              <li>cybernetics, control theory as it is applied to complex systems; the term cybernetics comes from the ancient Greek word kybernetikos (“good at steering”)</li><br>
+
+            </ul>
+          </li>
+          <!--Cybernetics-->
+
+
+
+          <!--Architectural Design-->
+          <li><span class="caret"><strong>Architectural Design</strong></span>
+            <ul class="nested">
+
+              <li>Architectural design is the art of planning structures with aestheticism and function in mind.</li><br>
+
+            </ul>
+          </li>
+          <!--Architectural Design-->
+
+
+          <!--Computational Design-->
+          <li><span class="caret"><strong>Computational Design</strong></span>
+            <ul class="nested">
+
+              <li>Design Method involving Computation</li><br>
+
+
+              <!--Algorithm-->
+              <li><span class="caret"><strong>Algorithm</strong></span><ul class="nested">
+
+                  <li>Circle Packing</li>
+                  <li>Shortest Path - Dijkstra's algorithm</li>
+
+                  <li><span class="caret"><strong>Machine Learning</strong></span><ul class="nested">
+
+                      <li>K-mean (Unsupervise)</li>
+                      <li>Gaussian mixture model(Unsupervise)</li>
+
+                      <li><span class="caret"><strong>Neuron Network</strong></span><ul class="nested">
+
+                          <li>Autoencoder (Unsupervised)</li>
+                          <li>GAN(Supervised)</li>
+                          <li>CNN(Supervised)</li>
+
+
+                      </ul></li>
+
+
+                  </ul></li>
+
+
+              </ul></li>
+
+
+              <li><span class="caret"><strong>Problems</strong></span><ul class="nested">
+
+                  <li>Travelling salesman problem</li>
+
+
+              </ul></li>
+              <!--Algorithm-->
+
+
+
+
+
+              <!--Parametric Design-->
+              <li><span class="caret"><strong>Parametric Design</strong></span>
+                <ul class="nested">
+
+                  <li>Parametric Design</li><br>
+
+                </ul>
+              </li>
+              <!--Computational Design-->
+
+
+
+
+            </ul>
+          </li>
+          <!--Computational Design-->
+
+
+
+        </ul>
+      </li>
+      <!--Design-->
+
+
+
+
+
+
+
+
+    </ul>
+
+    <!--Tree End-->
+  </div>
+  <script>
+    //var video = document.getElementById("myVideo");
+    //https://chengchili.github.io/video/hq.mp4
+    var video = document.getElementById("https://chengchili.github.io/video/hq.mp4");
+    var btn = document.getElementById("myBtn");
+    var toggler = document.getElementsByClassName("caret");
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+      });
+    }
+  </script>
+
+</body>
+
+</html>
