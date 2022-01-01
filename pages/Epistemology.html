@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, height=auto, initial-scale=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <style>
+    ul,
+    #myUL {
+      list-style-type: none;
+    }
+
+    #myUL {
+      margin: 0;
+      padding: 0;
+      height: auto;
+    }
+
+    .caret {
+      cursor: pointer;
+      -webkit-user-select: none;
+      /* Safari 3.1+ */
+      -moz-user-select: none;
+      /* Firefox 2+ */
+      -ms-user-select: none;
+      /* IE 10+ */
+      user-select: none;
+    }
+
+    .caret::before {
+      content: "\25B6";
+      color: black;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .caret-down::before {
+      -ms-transform: rotate(90deg);
+      /* IE 9 */
+      -webkit-transform: rotate(90deg);
+      /* Safari */
+      '
+transform: rotate(90deg);
+    }
+
+    .nested {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+      font-size: 17px;
+    }
+
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    .content {
+      overflow: auto;
+      //min-height: 100vh;
+      //position: fixed;
+      top: 0;
+      //bottom: 0;
+      //background: rgba(0, 0, 0, 0.5);
+      //color: #f1f1f1;
+      width: 100%;
+      padding: 25px;
+      height: 1500px;
+      //height: 100%;
+      position: relative
+    }
+
+    #myBtn {
+      width: 100px;
+      font-size: 18px;
+      padding: 5px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #myBtn:hover {
+      background: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="https://chengchili.github.io/video/hq.mp4" type="video/mp4">
+  </video>
+
+
+  <div class="content">
+    <h2>Epistemology</h2>
+    <p> List of my knowledge</p>
+
+
+    </br>
+    <!--Tree Start-->
+    <ul id="myUL">
+
+
+      <!--Design-->
+      <li><span class="caret"><strong>Design</strong></span>
+        <ul class="nested">
+          <li>A design is a plan or specification for the construction of an object or system or for the implementation of an activity or process</li><br>
+
+
+          <!--Cybernetics-->
+          <li><span class="caret"><strong>Cybernetics</strong></span>
+            <ul class="nested">
+
+              <li>cybernetics, control theory as it is applied to complex systems; the term cybernetics comes from the ancient Greek word kybernetikos (“good at steering”)</li><br>
+
+            </ul>
+          </li>
+          <!--Cybernetics-->
+
+
+
+          <!--Architectural Design-->
+          <li><span class="caret"><strong>Architectural Design</strong></span>
+            <ul class="nested">
+
+              <li>Architectural design is the art of planning structures with aestheticism and function in mind.</li><br>
+
+            </ul>
+          </li>
+          <!--Architectural Design-->
+
+
+          <!--Computational Design-->
+          <li><span class="caret"><strong>Computational Design</strong></span>
+            <ul class="nested">
+
+              <li>Design Method involving Computation</li><br>
+
+
+              <!--Algorithm-->
+              <li><span class="caret"><strong>Algorithm</strong></span><ul class="nested">
+
+                  <li>Circle Packing</li>
+                  <li>Shortest Path - Dijkstra's algorithm</li>
+
+                  <li><span class="caret"><strong>Machine Learning</strong></span><ul class="nested">
+
+                      <li>K-mean (Unsupervise)</li>
+                      <li>Gaussian mixture model(Unsupervise)</li>
+
+                      <li><span class="caret"><strong>Neuron Network</strong></span><ul class="nested">
+
+                          <li>Autoencoder (Unsupervised)</li>
+                          <li>GAN(Supervised)</li>
+                          <li>CNN(Supervised)</li>
+
+
+                      </ul></li>
+
+
+                  </ul></li>
+
+
+              </ul></li>
+
+
+              <li><span class="caret"><strong>Problems</strong></span><ul class="nested">
+
+                  <li>Travelling salesman problem</li>
+
+
+              </ul></li>
+              <!--Algorithm-->
+
+
+
+
+
+              <!--Parametric Design-->
+              <li><span class="caret"><strong>Parametric Design</strong></span>
+                <ul class="nested">
+
+                  <li>Parametric Design</li><br>
+
+                </ul>
+              </li>
+              <!--Computational Design-->
+
+
+
+
+            </ul>
+          </li>
+          <!--Computational Design-->
+
+
+
+        </ul>
+      </li>
+      <!--Design-->
+
+
+
+
+
+
+
+
+    </ul>
+    <br><br>
+
+
+<ul id="myUL">
+  <!--ARCHITECTURE SCHOOL-->
+  <li><span class="caret"><strong>ARCHITECTURE SCHOOL</strong></span>
+    <ul class="nested">
+
+      <!--MIT-->
+      <li><span class="caret"><strong>MIT</strong></span>
+        <ul class="nested">
+
+          <!--MIT-->
+          <li><span class="caret"><strong>SMArchS</strong></span>
+            <ul class="nested">
+              <!--MIT-->
+              <li><span class="caret"><strong>Computation</strong></span><ul class="nested"><br>
+                <li>The Computation Group inquires into the varied nature and practice of computation in architectural design,
+                  and the ways in which design meaning, intention, and knowledge are constructed through sensing, thinking,
+                  and making computationally. It focuses on the development of innovative computational tools, processes and theories,
+                  and applying these in creative, socially meaningful responses to challenging design problems.</li><br>
+                  <li>Faculties: Takehiko Nagakura, Larry Sass, Terry Knight, George Stiny</li><br>
+                <li><strong>1-4</strong></li><br>
+
+                <li><strong>1.Digital Design and Fabrication</strong></li>
+                <li>Principal researcher: Larry Sass</li><br>
+                <li>The Digital Design and Fabrication group is a center for education and research in areas of rapid prototyping and CAD/CAM fabrication
+                  for architects and designers. The group engages faculty, students and staff in research focused on the relationship between
+                  design computing and physical output used for design representation and reflection.
+                  <br>
+                  keywords: Digital Design and Fabrication group, CAD/CAM, design representation and reflection
+
+
+                </li><br>
+
+                <li><strong>2.Architecture Representation + Computation</strong></li>
+                <li>Principal researcher: Takehiko Nagakura</li><br>
+                <li>Founded in 1996, the Architecture Representation + Computation group sponsors a wide range of education and research activities to students
+                  and visiting scholars at MIT's Department of Architecture. The group's challenge is innovative use of computation for
+                  solving problems stemmed in contexts of architectural design practice. Current projects encompass software and hardware
+                  development, computer graphics content creation, and design work for architectural competitions and
+                  building projects.
+                  <br>
+                  keywords: Representation + Computation, computer graphics, solving problems stemmed in contexts of architectural design
+
+                </li><br>
+
+
+                  <li><strong>3.Shape Grammars</strong></li>
+                  <li>Principal researchers: George Stiny, Terry Knight, Takehiko Nagakura</li><br>
+                  <li>This group is engaged in a broad range of work on Shape Grammars, a visual and generative
+                    system for creating and describing designs on multiple levels. Work on shape and shape representation
+                    at the theoretical level aims at a new computational basis for design. Work on practical applications
+                    focuses on the potential of shape grammars in stylistic analysis and in the creative design process.
+                    Faculty and students are also exploring the use and development of digital and web-based technologies,
+                    computer software, and remote collaboration for supporting shape grammar applications..
+                    <br>
+                    keywords: Shape Grammars, isual and generative system, potential of shape grammars, web-based technologies, remote collaboration, grammar applications
+                  </li><br>
+
+                    <li><strong>4.Computational Making</strong></li>
+                    <li>Director: Professor Terry Knight</li><br>
+                    <li>The Computational Making research group is articulating a new area of interdisciplinary research on
+                      the processes and practices of making across contexts and scales. In recent years, there has been
+                       growing interest in materials and material practices, and in “making” and “makers”,
+                       usually revolving around digital fabrication. Our work aims to expand the study of making
+                       beyond its current bounds. We view making as an improvisational, action-centric, embodied,
+                       and situated activity. We examine the potentials of computational theories and techniques for
+                       understanding and enhancing making activities.
+                       <br>
+                       keywords: articulating a new area of interdisciplinary research, making
+                       beyond its current bounds, improvisational, action-centric, embodied,
+                       and situated activity
+                     </li><br>
+              </ul></li>
+                <!--MIT-->
+            </ul></li>
+              <!--MIT-->
+            </ul></li>
+          <!--MIT-->
+
+
+          <li><span class="caret"><strong>HARVARD</strong></span>
+            <ul class="nested">
+                </ul></li>
+
+
+
+
+
+
+
+
+
+        </ul></li>
+      <!--ARCHITECTURE SCHOOL-->
+
+
+
+
+
+    </ul>
+  </li>
+  <!--ARCHITECTURE SCHOOL-->
+
+</ul>
+    <!--Tree End-->
+  </div>
+  <script>
+    //var video = document.getElementById("myVideo");
+    //https://chengchili.github.io/video/hq.mp4
+    var video = document.getElementById("https://chengchili.github.io/video/hq.mp4");
+    var btn = document.getElementById("myBtn");
+    var toggler = document.getElementsByClassName("caret");
+    var i;
+
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+      });
+    }
+  </script>
+
+</body>
+
+</html>
